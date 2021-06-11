@@ -1,7 +1,7 @@
 
 import { View,Text,StyleSheet, TouchableOpacity} from "react-native";
 import React from "react";
-import { ListItem,Left,Thumbnail,Body } from "native-base";
+import { Thumbnail, Right,Icon } from "native-base";
 
 const PersonnelCard = ()=>{
     return(
@@ -19,6 +19,10 @@ const PersonnelCard = ()=>{
                             <Text style={styles.fonction}>Développeur Web</Text>
                             <Text style={styles.desc}>Motivation</Text>
                         </View>
+
+                        <Right>
+                            <Icon name='heart' style={styles.unlike}/>
+                        </Right>
                     
                 </View>
             </TouchableOpacity>
@@ -48,6 +52,12 @@ const styles = StyleSheet.create({
     desc:{
         fontSize:12,
         color:"#3529614b"
+    },
+    unlike:{
+        color:"#0000004b"
+    },
+    like:{
+        color:"#fc8080"
     }
 })
 export default PersonnelCard;
