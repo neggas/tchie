@@ -4,6 +4,7 @@ import {Left,Right,Button,H3} from "native-base";
 import JobCard from "../Jobs/Job-card"
 import Search from "../Jobs/Search-container";
 import PersonnelCard from "../Jobs/Personnel-card";
+import Titre from "../../Shared/Titre";
 
 const {width,height} = Dimensions.get("window")
 
@@ -28,18 +29,8 @@ const JobsContainer = ()=>{
            
         
              <View style={{flex:1}}>
-                <View style={styles.jobs}>
-                    <Left>
-                        <H3 style={styles.left}>Service/Jobs</H3>
-                        <View style={styles.trait}></View>
-                    </Left>
 
-                    <Right>
-                        <Button transparent >
-                            <Text style={styles.right}>Voir plus</Text>
-                        </Button>
-                    </Right>
-                </View>
+                <Titre titre={"Personnel/Jobs"}/>
                 <FlatList
                     showsHorizontalScrollIndicator={false}
                     horizontal
@@ -51,21 +42,8 @@ const JobsContainer = ()=>{
                 />
                 
             </View> 
-            <View style={styles.jobs}>
-                        <Left>
-                            <H3 style={styles.left}>Personnels</H3>
-                            <View style={styles.trait}></View>
-                        </Left>
-
-                        <Right>
-
-                            <Button transparent >
-                                <Text style={styles.right}>Voir plus</Text>
-                            </Button>
-
-                        </Right>
-                </View>
-            <View style={{flex:2,width:"100%"}}>
+            <Titre titre={"Personnel"}/>
+            <View style={{flex:1.5,width:"100%"}}>
                 <ScrollView 
                 showsVerticalScrollIndicator={false}
                 style={styles.personnel__container}>
@@ -87,27 +65,6 @@ const styles = StyleSheet.create({
         marginTop:10,
         backgroundColor:"#f5f7f9",
         alignItems:"center",
-    },
-    jobs:{
-        flexDirection:"row",
-        marginTop:10,
-        padding:10,
-        zIndex:99999
-    },
-    left:{
-        fontSize:18,
-        color:"#352961",
-        fontWeight:"700"
-    },
-    right:{
-        fontSize:14,
-        color:"#fa8072",
-        fontWeight:"700"
-    },
-    trait:{
-        height:3,
-        width:25,
-        backgroundColor:"#fa8072"
     },
     personnels:{
         
