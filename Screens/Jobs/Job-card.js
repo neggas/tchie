@@ -39,6 +39,7 @@ const styles = StyleSheet.create({
         borderRadius:15,
         padding:15,
         backgroundColor:"#352961",
+        margin:2
     },
     job__title:{
         flex:1,
