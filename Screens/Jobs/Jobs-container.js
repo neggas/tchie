@@ -1,6 +1,6 @@
 import React from "react";
 import {View,Text,StyleSheet,FlatList, Dimensions, ScrollView} from "react-native";
-import {Left,Right,Container,H3} from "native-base";
+import {Left,Right,Button,H3} from "native-base";
 import JobCard from "../Jobs/Job-card"
 import Search from "../Jobs/Search-container";
 import PersonnelCard from "../Jobs/Personnel-card";
@@ -35,7 +35,9 @@ const JobsContainer = ()=>{
                     </Left>
 
                     <Right>
-                        <Text style={styles.right}>mechant</Text>
+                        <Button transparent >
+                            <Text style={styles.right}>Voir plus</Text>
+                        </Button>
                     </Right>
                 </View>
                 <FlatList
@@ -56,7 +58,11 @@ const JobsContainer = ()=>{
                         </Left>
 
                         <Right>
-                            <Text style={styles.right}>mechant</Text>
+
+                            <Button transparent >
+                                <Text style={styles.right}>Voir plus</Text>
+                            </Button>
+
                         </Right>
                 </View>
             <View style={{flex:2,width:"100%"}}>
