@@ -4,7 +4,12 @@ import {Text,StyleSheet, Dimensions,Image, ImageBackground} from "react-native"
 import {Buton} from "native-base"
 
 const {height,width} = Dimensions.get("window")
-const HomeContainer = ()=>{
+const HomeContainer = ({setStart})=>{
+  
+    
+    startApp = ()=>{
+        setStart(true)
+    }
     return(
         <View style={styles.container}>
 
@@ -17,7 +22,7 @@ const HomeContainer = ()=>{
                 </View>
 
                 <View style={styles.button__container}>
-                    <Button  rounded style={styles.button__start}>
+                    <Button  rounded style={styles.button__start} onPress={()=>startApp()}>
                         <Text style={styles.button__text}>Commencer</Text>
                     </Button>
                 </View>

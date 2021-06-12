@@ -2,7 +2,7 @@
 import { Container,Header,Item,Icon,Button,Input } from "native-base";
 import React from "react";
 import {View,Text,StyleSheet,ScrollView} from "react-native";
-import Search from "./Search";
+import Search from "../../Shared/Search";
 import PersonnelCard from "../Jobs/Personnel-card";
 
 
