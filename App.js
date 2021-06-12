@@ -1,12 +1,19 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import Service from './Components/Services';
+import JobDetails from './Components/JobDetails';
+import CompagnyDetails from './Components/CompagnyDetails';
+import ProfilDetails from './Components/ProfilDetails';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+      {/* Les differents ecrans */}
+      
+      <Service />
+      {/* <JobDetails/> */}
+      {/* <CompagnyDetails/> */}
+      {/* <ProfilDetails/> */}
     </View>
   );
 }
@@ -14,8 +21,5 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
   },
 });
