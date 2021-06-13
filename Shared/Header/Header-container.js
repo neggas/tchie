@@ -22,6 +22,7 @@ const styles = StyleSheet.create({
         alignContent:"center",
         marginTop:10,
         padding:20,
+        zIndex:9999999,
     }
 })
 

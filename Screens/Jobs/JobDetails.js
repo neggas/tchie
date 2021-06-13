@@ -25,26 +25,7 @@ const JobDetails = () => {
                     alignItems: 'center',
                     backgroundColor: '#11111140',
                 }]}>
-                    <TouchableOpacity
-                        style={JobStyle.returnButton}
-                        activeOpacity={0.5}
-                    >
-                        <Text>
-                            <FontAwesome5
-                                name="long-arrow-alt-left"
-                                size={18}
-                            />
-                        </Text>
-                    </TouchableOpacity>
-
-                    <View style={JobStyle.logoContainer}>
-                        <Image
-                            style={JobStyle.logo}
-                            source={require('../../assets/LOGO.png')}
-                            resizeMode='stretch'
-                        />
-                    </View>
-
+                    
                     <View style={[JobStyle.container, {
                         width: '100%',
                         alignItems: 'flex-start',
@@ -145,7 +126,7 @@ const JobStyle = StyleSheet.create({
     bgContainer: {
         width: '100%',
         minHeight: 250,
-        marginTop: 40,
+        marginTop: 40
     },
     returnButton: {
         width: 30,

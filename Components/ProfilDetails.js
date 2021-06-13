@@ -40,25 +40,7 @@ const ProfilDetails = () => {
                     alignItems: 'center',
                     backgroundColor: '#11111140',
                 }]}>
-                    <TouchableOpacity
-                        style={JobStyle.returnButton}
-                        activeOpacity={0.5}
-                    >
-                        <Text>
-                            <FontAwesome5
-                                name="long-arrow-alt-left"
-                                size={18}
-                            />
-                        </Text>
-                    </TouchableOpacity>
-
-                    <View style={JobStyle.logoContainer}>
-                        <Image
-                            style={JobStyle.logo}
-                            source={require('../assets/LOGO.png')}
-                            resizeMode='stretch'
-                        />
-                    </View>
+                    
                 </View>
 
             </ImageBackground>

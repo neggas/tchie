@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5'
+import Search from '../Shared/Search';
 
 import {
     StyleSheet,
@@ -61,46 +62,13 @@ const Service = ()=> {
 
     return(
         <View style={ServiceStyle.ServiceContainer}>
-            <View style={ServiceStyle.topBloc}>
-                <TouchableOpacity
-                    style={ServiceStyle.returnButton}
-                    activeOpacity={0.5}
-                >
-                    <Text>
-                        <FontAwesome5
-                            name="long-arrow-alt-left"
-                            size={18}
-                        />
-                    </Text>
-                </TouchableOpacity>
-
-                <View style={ServiceStyle.logoContainer}>
-                    <Image
-                        style={ServiceStyle.logo}
-                        source={require('../assets/LOGO.png')}
-                        resizeMode='stretch'
-                    />
-                </View>
-
-                <View style={[ServiceStyle.container, {flexDirection: 'row', alignItems: 'center', justifyContent: 'center', marginTop: 40, marginBottom: 20}]}>
-                    <TextInput
-                        style={ServiceStyle.searchInput}
-                        placeholder='Recherchez...'
-                    />
-                    <View style={ServiceStyle.searchBtn}>
-                        <FontAwesome5
-                            name='search'
-                            color='white'
-                            size={16}
-                        />
-                    </View>
-                </View>
-                <Text>Voyer ce que nous trouvons pour vous</Text>
-            </View>
-
+            
+            <Search/>
             <View style={ServiceStyle.bottomBloc}>
                 <Text style={{color: 'gray', marginTop: 10, marginBottom: 10}}>2 Services trouvés</Text>
-                <ScrollView>
+                <ScrollView
+                 showsVerticalScrollIndicator={false}
+                >
                     {
                         items.map((item) =>{
                             return(

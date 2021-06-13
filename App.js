@@ -22,10 +22,12 @@ export default function App() {
     <View style={styles.container}>
       {/* Les differents ecrans */}
       
+      <Header/>
       {/* <Service /> */}
       {/* <JobDetails/> */}
       {/* <CompagnyDetails/> */}
-      <JobsContainer/>
+      <ProfilDetails/>
+      {/* <Service/> */}
     </View>
   ) 
 }
