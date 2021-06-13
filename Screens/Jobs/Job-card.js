@@ -6,9 +6,14 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 import {Left,Right} from "native-base";
 
 const {width} = Dimensions.get("window");
-const JobCard = ()=>{
+const JobCard = (props)=>{
+    
+    const {navigation} = props
+
     return(
-        <TouchableOpacity style={styles.container}>
+        <TouchableOpacity style={styles.container}
+            onPress={()=>navigation.navigate("Detail job")}
+        >
             <View styles={styles.job__title}>
                 <Text style={styles.text}>Web Designer UX</Text>
                 <Fontisto name="favorite" size={18} color="white"  style={styles.font}/>

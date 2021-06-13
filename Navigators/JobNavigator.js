@@ -2,7 +2,7 @@
 import React from "react";
 import {createStackNavigator} from "@react-navigation/stack";
 import JobsContainer from "../Screens/Jobs/Jobs-container";
-
+import JobDetails from "../Screens/Jobs/JobDetails";
 const Stack = createStackNavigator();
 
 function MyStack(){
@@ -15,14 +15,14 @@ function MyStack(){
                     headerShown:false
                 }}
             />
-{/* 
+ 
             <Stack.Screen
-                name="Detail product"
-                component={DetailsProduct}
+                name="Detail job"
+                component={JobDetails}
                 options={{
                     headerShown:false
                 }}
-            /> */}
+            /> 
            
         </Stack.Navigator>
     )

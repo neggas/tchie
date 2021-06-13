@@ -1,10 +1,23 @@
 
 import React from "react";
 import { StyleSheet,View,Text} from "react-native";
-import {H3,Button} from "native-base"
+import {H3,Button} from "native-base";
+import {PERSONNEL,PERSONNEL_AND_JOBS} from "../Utils/TitlesNames";
 
-const Titre = ({titre})=>{
-
+const Titre = ({titre,navigation})=>{
+    const navigateTo = (navigation,titre)=>{
+        switch(titre) {
+            
+            case PERSONNEL_AND_JOBS:
+              navigation.navigate("Job")
+              break;
+            case PERSONNEL:
+              navigation.navigate("Service")
+              break;
+            default:
+              break;
+          }
+    }
     return(
         <View style={styles.jobs}>
             <View>
@@ -13,7 +26,9 @@ const Titre = ({titre})=>{
             </View>
 
             <View>
-                <Button transparent>
+                <Button transparent
+                    onPress={()=>navigateTo(navigation,titre)}
+                >
                     <Text style={styles.right}>Voir plus</Text>
                 </Button>
             </View>

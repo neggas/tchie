@@ -3,10 +3,13 @@ import { View,Text,StyleSheet, TouchableOpacity} from "react-native";
 import React from "react";
 import { Thumbnail, Right,Icon } from "native-base";
 
-const PersonnelCard = ()=>{
+const PersonnelCard = (props)=>{
+    const {navigation} = props
     return(
         
-            <TouchableOpacity >
+            <TouchableOpacity 
+                onPress={()=>navigation.navigate("Detail profil")}
+            >
                 <View style={styles.listItem}>
                   
                         <Thumbnail

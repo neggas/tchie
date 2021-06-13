@@ -241,29 +241,6 @@ const JobStyle = StyleSheet.create({
         minHeight: 150,
         marginTop: 40,
     },
-    returnButton: {
-        width: 30,
-        height: 30,
-        justifyContent: 'center',
-        alignItems: 'center',
-        borderRadius: 3,
-        backgroundColor: 'white',
-        position: 'absolute',
-        top: 25,
-        left: 10,
-    },
-    logoContainer: {
-        width: 45,
-        height: 45,
-        borderRadius: 100,
-        alignItems: 'center',
-        justifyContent: 'center',
-        backgroundColor: '#fff'
-    },
-    logo: {
-        width: '100%',
-        height: '100%',
-    },
     iconContainer: {
         alignItems: 'center',
         justifyContent: 'center',

@@ -22,7 +22,9 @@ const DATA = [
       title: 'Third Item',
     },
   ];
-const JobsContainer = ()=>{
+const JobsContainer = ({navigation})=>{
+   
+  
     return (
         <View style={styles.jobs_container}>
             <Search/>
@@ -32,13 +34,15 @@ const JobsContainer = ()=>{
                 style={styles.personnel__container}>
              <View >
 
-                <Titre titre={"Personnel/Jobs"}/>
+                <Titre 
+                navigation={navigation}
+                titre={"Personnel/Jobs"}/>
                 <FlatList
                     showsHorizontalScrollIndicator={false}
                     horizontal
                     data={DATA}
                     renderItem={({item})=>(
-                        <JobCard/>
+                        <JobCard navigation={navigation}/>
                     )}
                     keyExtractor={item => item.id}
                 />
@@ -47,14 +51,14 @@ const JobsContainer = ()=>{
             
             
             <View>
-                <Titre titre={"Personnel"}/>
+                <Titre 
+                navigation={navigation}
+                titre={"Personnel"}/>
                 
-                <PersonnelCard/>
-                <PersonnelCard/>
-                <PersonnelCard/>
-                <PersonnelCard/>
-                <PersonnelCard/>
-               
+                {DATA.map((dt)=>(
+                     <PersonnelCard navigation={navigation}key={dt.id}/>
+                ))}
+
             </View>
             </ScrollView>
         </View>
