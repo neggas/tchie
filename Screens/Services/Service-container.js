@@ -6,7 +6,9 @@ import Search from "../../Shared/Search";
 import PersonnelCard from "../Jobs/Personnel-card";
 
 
-const ServicesContainer = ()=>{
+const ServicesContainer = ({navigation})=>{
+    const services = [1,2,3,4,5,6,7,8,9,10];
+    
     return(
         <View style={styles.container}>
             <Search/>
@@ -21,18 +23,12 @@ const ServicesContainer = ()=>{
             <ScrollView 
             showsVerticalScrollIndicator={false}
             style={{marginTop:20}}>
-                <PersonnelCard/>
-                <PersonnelCard/>
-                <PersonnelCard/> 
-                <PersonnelCard/>
-                <PersonnelCard/>
-                <PersonnelCard/>
-                <PersonnelCard/>
-                <PersonnelCard/>
-                <PersonnelCard/> 
-                <PersonnelCard/>
-                <PersonnelCard/>
-                <PersonnelCard/>
+
+                {services.map((serv)=>(
+                    <PersonnelCard 
+                    navigation={navigation}
+                    key={serv.toLocaleString()}/>
+                ))}
             </ScrollView>
            
             
