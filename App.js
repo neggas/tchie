@@ -1,3 +1,5 @@
+
+
 import { StatusBar } from 'expo-status-bar';
 import React, { useState } from 'react';
 import { View,StyleSheet } from 'react-native';
@@ -7,20 +9,29 @@ import JobsContainer from "./Screens/Jobs/Jobs-container";
 import CategorieEntreprise from "./Screens/CategorieEntreprise/CategorieEntreprise-Container"
 import Entreprise from "./Screens/Entreprise/Entreprise-container";
 import Header from "./Shared/Header/Header-container";
+import Service from './Components/Services';
+import JobDetails from './Screens/Jobs/JobDetails';
+import CompagnyDetails from './Screens/Entreprise/CompagnyDetails';
+import ProfilDetails from './Components/ProfilDetails';
 
 export default function App() {
  
   const [start,setStart] = useState(false)
-  return start ?  (
-    <View style={{flex:1,backgroundColor:"#f6f7f9"}}>
-       <Header/>
-        <StatusBar backgroundColor="white"/>
-        <JobsContainer/>
+ 
+  return (
+    <View style={styles.container}>
+      {/* Les differents ecrans */}
+      
+      {/* <Service /> */}
+      {/* <JobDetails/> */}
+      {/* <CompagnyDetails/> */}
+      <JobsContainer/>
     </View>
-  ) : (
-    <HomeContainer setStart={setStart}/>
-  )
+  ) 
 }
 
-
-
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+})
