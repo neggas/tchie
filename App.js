@@ -13,27 +13,18 @@ import Service from './Components/Services';
 import JobDetails from './Screens/Jobs/JobDetails';
 import CompagnyDetails from './Screens/Entreprise/CompagnyDetails';
 import ProfilDetails from './Components/ProfilDetails';
+import {NavigationContainer} from "@react-navigation/native";
+import Main from "./Navigators/Main";
 
 export default function App() {
  
   const [start,setStart] = useState(false)
  
   return (
-    <View style={styles.container}>
-      {/* Les differents ecrans */}
-      
+    <NavigationContainer>
       <Header/>
-      {/* <Service /> */}
-      {/* <JobDetails/> */}
-      {/* <CompagnyDetails/> */}
-      <ProfilDetails/>
-      {/* <Service/> */}
-    </View>
+      <Main/>
+    </NavigationContainer>
   ) 
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-})
