@@ -32,6 +32,7 @@ const Main = ()=>{
                 }
             }}
 
+            initialRouteName={"Home"}
            
         >
 
