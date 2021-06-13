@@ -27,8 +27,10 @@ const JobsContainer = ()=>{
         <View style={styles.jobs_container}>
             <Search/>
            
-        
-             <View style={{flex:1}}>
+            <ScrollView 
+                showsVerticalScrollIndicator={false}
+                style={styles.personnel__container}>
+             <View >
 
                 <Titre titre={"Personnel/Jobs"}/>
                 <FlatList
@@ -43,19 +45,18 @@ const JobsContainer = ()=>{
                 
             </View> 
             
-            <Titre titre={"Personnel"}/>
-            <View style={{flex:1.5,width:"100%"}}>
+            
+            <View>
+                <Titre titre={"Personnel"}/>
                 
-                <ScrollView 
-                showsVerticalScrollIndicator={false}
-                style={styles.personnel__container}>
-                    <PersonnelCard/>
-                    <PersonnelCard/>
-                    <PersonnelCard/>
-                    <PersonnelCard/>
-                    <PersonnelCard/>
-                </ScrollView>
+                <PersonnelCard/>
+                <PersonnelCard/>
+                <PersonnelCard/>
+                <PersonnelCard/>
+                <PersonnelCard/>
+               
             </View>
+            </ScrollView>
         </View>
     )
 }
@@ -63,9 +64,10 @@ const JobsContainer = ()=>{
 
 const styles = StyleSheet.create({
     jobs_container:{
-        height:"100%",
-        marginTop:10,
+       
+        marginTop:30,
         backgroundColor:"#f5f7f9",
+        flex:1,
         alignItems:"center",
     },
     personnels:{
@@ -74,9 +76,8 @@ const styles = StyleSheet.create({
     },
     personnel__container:{
         width:"100%",
-        padding:15,
+        padding:10,
         height:"53%",
-        position:"absolute",
     }
    
 })

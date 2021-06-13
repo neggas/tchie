@@ -1,7 +1,7 @@
 
 import React from "react";
 import {createStackNavigator} from "@react-navigation/stack";
-import Entreprise from "../Screens/Entreprise/Entreprise-container";
+import CategorieEntreprise from "../Screens/CategorieEntreprise/CategorieEntreprise-Container";
 
 const Stack = createStackNavigator();
 
@@ -10,7 +10,7 @@ function MyStack(){
         <Stack.Navigator>
             <Stack.Screen
                 name="Compagny"
-                component={Entreprise}
+                component={CategorieEntreprise}
                 options={{
                     headerShown:false
                 }}

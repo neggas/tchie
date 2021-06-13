@@ -12,7 +12,7 @@ const CategorieEntreprise = ()=>{
         <View style={styles.container}>
             <Titre titre="Entreprise par entreprise"/>
 
-            <View style={{height:(height/2)+(width/2 - 20),width:"100%",marginTop:20}}>
+            <View style={{height:(height/2)+(width/2 - 20),width:"100%",marginTop:5}}>
                 <ScrollView
                     
                     showsVerticalScrollIndicator={false}

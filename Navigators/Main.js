@@ -24,7 +24,7 @@ const Main = ()=>{
                 activeTintColor:"#fc8080",
                 keyboardHidesTabBar:true,
                 style:{
-                    position:"absolute",
+                
                     backgroundColor:"#ffffff",
                     height:70,
                     borderTopRightRadius:20,

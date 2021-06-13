@@ -1,7 +1,7 @@
 
 import React from "react";
 import { StyleSheet,View,Text} from "react-native";
-import {Left,H3,Right,Button} from "native-base"
+import {H3,Button} from "native-base"
 
 const Titre = ({titre})=>{
 
@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
         padding:10,
         justifyContent:"space-between",
         alignItems:"center",
-        zIndex:99999
+        zIndex:99999,
     },
     left:{
         fontSize:18,
