@@ -5,14 +5,15 @@ import {H3,Button} from "native-base";
 import {PERSONNEL,PERSONNEL_AND_JOBS} from "../Utils/TitlesNames";
 
 const Titre = ({titre,navigation})=>{
-    const navigateTo = (navigation,titre)=>{
+    const navigateTo = (titre,nav=navigation,)=>{
+       
         switch(titre) {
             
             case PERSONNEL_AND_JOBS:
-              navigation.navigate("Job")
+                nav.navigate("Job")
               break;
             case PERSONNEL:
-              navigation.navigate("Service")
+                nav.navigate("Service")
               break;
             default:
               break;
@@ -27,7 +28,7 @@ const Titre = ({titre,navigation})=>{
 
             <View>
                 <Button transparent
-                    onPress={()=>navigateTo(navigation,titre)}
+                    onPress={()=>navigateTo(titre)}
                 >
                     <Text style={styles.right}>Voir plus</Text>
                 </Button>
