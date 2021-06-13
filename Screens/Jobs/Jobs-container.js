@@ -42,8 +42,10 @@ const JobsContainer = ()=>{
                 />
                 
             </View> 
+            
             <Titre titre={"Personnel"}/>
             <View style={{flex:1.5,width:"100%"}}>
+                
                 <ScrollView 
                 showsVerticalScrollIndicator={false}
                 style={styles.personnel__container}>

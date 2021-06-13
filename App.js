@@ -15,7 +15,7 @@ export default function App() {
     <View style={{flex:1,backgroundColor:"#f6f7f9"}}>
        <Header/>
         <StatusBar backgroundColor="white"/>
-        <Entreprise/>
+        <JobsContainer/>
     </View>
   ) : (
     <HomeContainer setStart={setStart}/>
