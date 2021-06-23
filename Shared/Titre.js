@@ -58,7 +58,7 @@ const styles = StyleSheet.create({
         fontWeight:"700"
     },
     trait:{
-        height:3,
+        height:4,
         width:25,
         backgroundColor:"#fa8072"
     },

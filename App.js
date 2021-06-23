@@ -13,18 +13,27 @@ import Service from './Components/Services';
 import JobDetails from './Screens/Jobs/JobDetails';
 import CompagnyDetails from './Screens/Entreprise/CompagnyDetails';
 import ProfilDetails from './Components/ProfilDetails';
+import Register from "./Screens/Register/Register-container";
 import {NavigationContainer} from "@react-navigation/native";
 import Main from "./Navigators/Main";
 
 export default function App() {
  
   const [start,setStart] = useState(false)
+
+    return(
+      <View>
+        <Header/>
+        <Register/>
+      </View>
+     
+    )
  
-  return start ? (
-    <NavigationContainer>
-      <Header/>
-      <Main/>
-    </NavigationContainer>
-  ) : <HomeContainer setStart={setStart}/>
+  // return start ? (
+  //   <NavigationContainer>
+  //     <Header/>
+  //     <Main/>
+  //   </NavigationContainer>
+  // ) : <HomeContainer setStart={setStart}/>
 }
 
