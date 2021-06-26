@@ -2,11 +2,11 @@ import React from "react";
 import {View, StyleSheet} from "react-native";
 import {H3} from "native-base"
 
-const SimpleTitle = ()=>{
+const SimpleTitle = ({text})=>{
     return(
         <View style={styles.jobs}>
             <View>
-                <H3 style={styles.left}>Détails personnel</H3>
+                <H3 style={styles.left}>{text}</H3>
                 <View style={styles.trait}></View>
             </View>
         </View>

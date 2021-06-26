@@ -13,6 +13,7 @@ import Service from './Components/Services';
 import JobDetails from './Screens/Jobs/JobDetails';
 import CompagnyDetails from './Screens/Entreprise/CompagnyDetails';
 import ProfilDetails from './Components/ProfilDetails';
+import Login from "./Screens/Login/Login-container";
 import Register from "./Screens/Register/Register-container";
 import {NavigationContainer} from "@react-navigation/native";
 import Main from "./Navigators/Main";
@@ -22,7 +23,7 @@ export default function App() {
   const [start,setStart] = useState(false)
 
     return(
-      <View>
+      <View style={{height:"100%"}}>
         <Header/>
         <Register/>
       </View>
