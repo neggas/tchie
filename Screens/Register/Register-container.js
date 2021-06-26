@@ -2,7 +2,7 @@ import { Form, H1,Item,CheckBox, Select ,Input,Picker } from "native-base";
 import React, { useState } from "react";
 import { useEffect } from "react";
 import {View,Text, StyleSheet,TextInput ,TouchableOpacity,ScrollView} from  "react-native";
-
+import CustumButton from "../../Components/CustumButton/CustumButton";
 
 
 const data = require("../../assets/data/countries.json");
@@ -88,10 +88,7 @@ const Register = ()=>{
 
             <View style={styles.bottomView}>
                 <View style={{justifyContent:"center",alignItems:"center"}}>
-                        <TouchableOpacity
-                            style={styles.button}>
-                            <Text style={styles.button_text}>S'inscrire</Text>
-                        </TouchableOpacity>
+                        <CustumButton text="S'inscrire"/>
                 </View>
                 <View style={styles.add_account}>
                     <Text style={styles.button_text}>Vous avez dejà un compte ? 
@@ -156,16 +153,6 @@ const styles = StyleSheet.create({
         height:30,
         borderWidth:4,
         width:"60%",
-    },
-    button:{
-        justifyContent:"center",
-        backgroundColor:"#352961",
-        borderColor:"white",
-        width:180,
-        alignItems:"center",
-        borderRadius:15,
-        height:40,
-        marginTop:30
     },
     button_text:{
         color:"white",

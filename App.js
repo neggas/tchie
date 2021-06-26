@@ -25,7 +25,7 @@ export default function App() {
     return(
       <View style={{height:"100%"}}>
         <Header/>
-        <Register/>
+        <Login/>
       </View>
      
     )

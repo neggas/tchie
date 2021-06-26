@@ -2,6 +2,7 @@ import React from "react";
 import {View,Text,TextInput,Pressable} from "react-native";
 import styles from "./login-styles";
 import AuthHeader from "../../Components/AuthHeader/AuthHeader";
+import CustumButton from "../../Components/CustumButton/CustumButton";
 
 const Login = ()=>{
     return(
@@ -15,9 +16,7 @@ const Login = ()=>{
                 </View>
 
                 <View style={styles.connect}>
-                    <Pressable style={styles.button}>
-                        <Text style={styles.button_text}>Se connecter</Text>
-                    </Pressable>
+                    <CustumButton text="Se connecter"/>
 
                     <Pressable>
                         <Text style={{color:"#ccc"}}>Mot de passe oublié ?</Text>
