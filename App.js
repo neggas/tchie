@@ -14,6 +14,7 @@ import JobDetails from './Screens/Jobs/JobDetails';
 import CompagnyDetails from './Screens/Entreprise/CompagnyDetails';
 import ProfilDetails from './Components/ProfilDetails';
 import Login from "./Screens/Login/Login-container";
+import Reset from './Screens/Reset/ResetContainer';
 import Register from "./Screens/Register/Register-container";
 import {NavigationContainer} from "@react-navigation/native";
 import Main from "./Navigators/Main";

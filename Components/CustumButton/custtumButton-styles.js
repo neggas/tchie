@@ -6,15 +6,16 @@ export default styles = StyleSheet.create({
         justifyContent:"center",
         backgroundColor:"#352961",
         borderColor:"white",
-        width:180,
         alignItems:"center",
         borderRadius:15,
         height:40,
-        marginTop:30
+        marginTop:30,
+        padding:15
     },
     button_text:{
         color:"white",
         fontSize:16,
+        textAlign:"center",
     }
    
 })

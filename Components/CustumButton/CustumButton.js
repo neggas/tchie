@@ -7,7 +7,9 @@ const CustumButton = ({text})=>{
     return(
         <TouchableOpacity
             style={styles.button}>
-            <Text style={styles.button_text}>{text}</Text>
+            <Text 
+            
+            style={styles.button_text}>{text}</Text>
         </TouchableOpacity>
     )
 }
