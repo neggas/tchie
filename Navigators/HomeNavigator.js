@@ -3,7 +3,7 @@ import React from "react";
 import {createStackNavigator} from "@react-navigation/stack";
 import JobsContainer from "../Screens/Jobs/Jobs-container";
 import JobDetails from "../Screens/Jobs/JobDetails";
-import ProfilDetails from "../Components/ProfilDetails";
+import ProfilDetails from "../Screens/Profil/ProfilDetails";
 import { title } from "min-document";
 
 const Stack = createStackNavigator();

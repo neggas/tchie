@@ -1,7 +1,7 @@
 
 import React from "react";
 import {createStackNavigator} from "@react-navigation/stack";
-import Service from "../Components/Services";
+import Service from "../Screens/Services/Services";
 
 const Stack = createStackNavigator();
 

@@ -50,6 +50,7 @@ const InboxContainer = () => {
                     style={{
                         backgroundColor: 'transparent',
                     }}
+                    activeOpacity={0.8}
                 >
                     <FontAwesome5
                         name="paper-plane"

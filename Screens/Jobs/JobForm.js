@@ -61,6 +61,7 @@ const JobForm = () => {
                                     }}
                                 >
                                 <TouchableOpacity
+                                    activeOpacity={0.8}
                                     style={{
                                         position: 'absolute',
                                         right: -8,
