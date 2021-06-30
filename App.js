@@ -15,6 +15,8 @@ import CompagnyDetails from './Screens/Entreprise/CompagnyDetails';
 import ProfilDetails from './Components/ProfilDetails';
 import Login from "./Screens/Login/Login-container";
 import Register from "./Screens/Register/Register-container";
+import MessagesInbox from "./Screens/Messages/InboxContainer"
+import JobForm from './Screens/Jobs/JobForm';
 import {NavigationContainer} from "@react-navigation/native";
 import Main from "./Navigators/Main";
 
@@ -25,7 +27,7 @@ export default function App() {
     return(
       <View style={{height:"100%"}}>
         <Header/>
-        <Register/>
+        <MessagesInbox/>
       </View>
      
     )
