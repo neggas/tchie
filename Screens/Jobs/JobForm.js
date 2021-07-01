@@ -87,41 +87,60 @@ const JobForm = () => {
                         <TextInput placeholder="Durée du job" style={styles.input}/>
 
                         <SimpleTitle text="Niveau d'anglais"/>
-                        <Picker
+                        <View style={styles.pickerContainer}>
+                            <Picker
 
-                            style={styles.picker}
-                            placeholder="Niveau d'anglais"
-                            mode="dropdown"
-                        >
-                            {niveaux.map((niveau) =>(
-                                <Picker.Item
-                                key={niveau.id}
-                                label={niveau.label}
-                                value={niveau.value}
-                            />
-                            ))}
-                        </Picker>
+                                style={styles.picker}
+                                placeholder="Niveau d'anglais"
+                                mode="dropdown"
+                            >
+                                {niveaux.map((niveau) =>(
+                                    <Picker.Item
+                                    key={niveau.id}
+                                    label={niveau.label}
+                                    value={niveau.value}
+                                />
+                                ))}
+                            </Picker>
+                        </View>
 
                         <SimpleTitle text="Niveau du projet"/>
-                        <Picker
+                        <View style={styles.pickerContainer}>
+                            <Picker
 
-                            style={styles.picker}
-                            placeholder="Niveau du projet"
-                            mode="dropdown"
-                        >
-                            {niveaux.map((niveau) =>(
-                                <Picker.Item
-                                key={niveau.id}
-                                label={niveau.label}
-                                value={niveau.value}
-                            />
-                            ))}
-                        </Picker>
+                                style={styles.picker}
+                                placeholder="Niveau du projet"
+                                mode="dropdown"
+                            >
+                                {niveaux.map((niveau) =>(
+                                    <Picker.Item
+                                    key={niveau.id}
+                                    label={niveau.label}
+                                    value={niveau.value}
+                                />
+                                ))}
+                            </Picker>
+                        </View>
                         
                     </View>
                     <View>
                         <SimpleTitle text="Catégories du job"/>
-                        <TextInput placeholder="Choisir une catégorie" style={styles.input}/>
+                        <View style={styles.pickerContainer}>
+                            <Picker
+
+                                style={styles.picker}
+                                placeholder="Niveau du projet"
+                                mode="dropdown"
+                            >
+                                {niveaux.map((niveau) =>(
+                                    <Picker.Item
+                                    key={niveau.id}
+                                    label={niveau.label}
+                                    value={niveau.value}
+                                />
+                                ))}
+                            </Picker>
+                        </View>
                     </View>
                     <View>
                         <SimpleTitle text="Description du job"/>
@@ -130,7 +149,22 @@ const JobForm = () => {
                     </View>
                     <View>
                         <SimpleTitle text="Compétences requises"/>
-                        <TextInput placeholder="plusieurs choix possible" style={styles.input}/>
+                        <View style={styles.pickerContainer}>
+                            <Picker
+
+                                style={styles.picker}
+                                placeholder="Niveau du projet"
+                                mode="dropdown"
+                            >
+                                {niveaux.map((niveau) =>(
+                                    <Picker.Item
+                                    key={niveau.id}
+                                    label={niveau.label}
+                                    value={niveau.value}
+                                />
+                                ))}
+                            </Picker>
+                        </View>
                     </View>
                     
                 </Form>
@@ -182,6 +216,11 @@ const styles = StyleSheet.create({
         padding:8,
         marginTop:10,
         backgroundColor:"white",
+    },
+    pickerContainer: {
+        width:"100%",
+        borderWidth:1,
+        borderColor:"#352961",
     },
     picker:{
         width:"100%",
