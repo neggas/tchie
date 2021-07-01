@@ -7,7 +7,8 @@ import {
     Text,
     ImageBackground,
     TouchableOpacity,
-    Image
+    Image,
+    ScrollView,
 } from 'react-native';
 
 const CompagnyDetails = () => {
@@ -71,88 +72,93 @@ const CompagnyDetails = () => {
                         marginRight: 6,
                         position: 'absolute',
                         right: 18,
-                        top: '-6%',
+                        top: '-8%',
+                        zIndex: 100,
                         }}>
                         <Text>LOGO</Text>
                     </View>
-                    
-                    <View style={JobStyle.detailContainer}>
-                        <View style={[JobStyle.iconContainer,{
-                            width: 30,
-                            height: 30,
-                            alignItems: 'center',
-                            justifyContent: 'center',
-                            position: 'absolute',
-                            right: 18,
-                        }]}>
-                            <FontAwesome5
-                                name="share-alt"
-                                size={24}
-                                color='black'
-                            />
-                        </View>
-                        <View style={JobStyle.detailItem}>
-                            <View>
-                                <Text style={JobStyle.detailTitle}>A propos</Text>
-                                <View style={JobStyle.smallBar}></View>
-                            </View>
-                            <Text style={{
-                                fontSize: 16,
-                                marginTop: 6,
-                            }}>
-                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                                It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-                            </Text>
-                        </View>
-                        <View style={JobStyle.detailItem}>
-                        <View>
-                            <Text style={JobStyle.detailTitle}>Localité</Text>
-                                <View style={JobStyle.smallBar}></View>
-                            </View>
-                            <View style={{
-                                width: '100%',
-                                flexDirection: 'row',
+                    <ScrollView
+                        showsVerticalScrollIndicator={false}
+                    >
+                        <View style={JobStyle.detailContainer}>
+                            <View style={[JobStyle.iconContainer,{
+                                width: 30,
+                                height: 30,
                                 alignItems: 'center',
-                                marginTop: 8,
-                            }}>
-                                <View style={[JobStyle.iconContainer, {
-                                    width: 50,
-                                    height: 50,
-                                    borderRadius: 15,
-                                    backgroundColor: '#eee'
-                                }]}>
-                                    <FontAwesome5
-                                        name="map-marker-alt"
-                                        size={25}
-                                        color='#352961'
-                                    />
-                                </View>
+                                justifyContent: 'center',
+                                position: 'absolute',
+                                right: 18,
+                            }]}>
+                                <FontAwesome5
+                                    name="share-alt"
+                                    size={24}
+                                    color='black'
+                                />
+                            </View>
+                            <View style={JobStyle.detailItem}>
                                 <View>
-                                    <Text style={{fontSize: 16}}>7ème Tranche, Cocody, Abidjan</Text>
-                                    <Text style={{fontSize: 16}}>Côte d'Ivoire</Text>
+                                    <Text style={JobStyle.detailTitle}>A propos</Text>
+                                    <View style={JobStyle.smallBar}></View>
+                                </View>
+                                <Text style={{
+                                    fontSize: 16,
+                                    marginTop: 6,
+                                }}>
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                    Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                                    It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                                </Text>
+                            </View>
+                            <View style={JobStyle.detailItem}>
+                            <View>
+                                <Text style={JobStyle.detailTitle}>Localité</Text>
+                                    <View style={JobStyle.smallBar}></View>
+                                </View>
+                                <View style={{
+                                    width: '100%',
+                                    flexDirection: 'row',
+                                    alignItems: 'center',
+                                    marginTop: 8,
+                                }}>
+                                    <View style={[JobStyle.iconContainer, {
+                                        width: 50,
+                                        height: 50,
+                                        borderRadius: 15,
+                                        backgroundColor: '#eee'
+                                    }]}>
+                                        <FontAwesome5
+                                            name="map-marker-alt"
+                                            size={25}
+                                            color='#352961'
+                                        />
+                                    </View>
+                                    <View>
+                                        <Text style={{fontSize: 16}}>7ème Tranche, Cocody, Abidjan</Text>
+                                        <Text style={{fontSize: 16}}>Côte d'Ivoire</Text>
+                                    </View>
+                                </View>
+                            </View>
+                            <View style={JobStyle.detailItem}>
+                                <View>
+                                <Text style={JobStyle.detailTitle}>Contact</Text>
+                                    <View style={JobStyle.smallBar}></View>
+                                </View>
+                                
+                                <View style={{
+                                    marginLeft: 10,
+                                    marginTop: 3,
+                                }}>
+                                    <Text style={JobStyle.contact}>+225 07 00 82 92 23</Text>
+                                    <Text style={JobStyle.contact}>+225 01 00 82 92 23</Text>
                                 </View>
                             </View>
                         </View>
-                        <View style={JobStyle.detailItem}>
-                            <View>
-                            <Text style={JobStyle.detailTitle}>Contact</Text>
-                                <View style={JobStyle.smallBar}></View>
-                            </View>
-                            
-                            <View style={{
-                                marginLeft: 10,
-                                marginTop: 3,
-                            }}>
-                                <Text style={JobStyle.contact}>+225 07 00 82 92 23</Text>
-                                <Text style={JobStyle.contact}>+225 01 00 82 92 23</Text>
-                            </View>
-                        </View>
-                    </View>
+
+                    </ScrollView>
 
                     <View style={{
                         position: 'absolute',
-                        bottom: 0,
+                        bottom: 22,
                         width: '100%',
                         flexDirection: 'row',
                         left: 20,
@@ -246,8 +252,10 @@ const JobStyle = StyleSheet.create({
         color: 'gray'
     },
     detailContainer: {
+        height: "100%",
         position: 'relative',
         marginTop: 20,
+        paddingBottom: 40,
     },
     detailItem: {
         marginBottom: 25,

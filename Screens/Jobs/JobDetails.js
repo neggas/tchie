@@ -7,7 +7,8 @@ import {
     Text,
     ImageBackground,
     TouchableOpacity,
-    Image
+    Image,
+    ScrollView,
 } from 'react-native';
 
 const JobDetails = () => {
@@ -46,58 +47,64 @@ const JobDetails = () => {
             <View style={{
                 width: '100%',
                 flex: 1,
-                height: '60%',
                 alignItems: 'center',
                 position: 'absolute',
-                top: 255,
+                top: 210,
+                bottom: 0,
             }}>
-                <View style={JobStyle.bottomContainer}>
-                    <View style={{width: '100%', flexDirection: 'row', alignItems: 'center'}}>
-                        <View style={{
-                            width: 50,
-                            height: 50,
-                            borderRadius: 15,
-                            backgroundColor: 'yellow',
-                            alignItems: 'center',
-                            justifyContent: 'center',
-                            marginRight: 6,
-                            position: 'relative',
-                        }}>
-                            <Text>LOGO</Text>
-                        </View>
-                        <View>
-                            <Text style={JobStyle.compagnyName}>Linkedin Corporation</Text>
-                            <Text style={JobStyle.jobLocality}>Cocody</Text>
-                        </View>
-                    </View>
+                    <View style={JobStyle.bottomContainer}>
+                        <ScrollView
+                            showsVerticalScrollIndicator={false}
+                        >
+                            <View style={{width: '100%', flexDirection: 'row', alignItems: 'center'}}>
+                                <View style={{
+                                    width: 50,
+                                    height: 50,
+                                    borderRadius: 15,
+                                    backgroundColor: 'yellow',
+                                    alignItems: 'center',
+                                    justifyContent: 'center',
+                                    marginRight: 6,
+                                    position: 'relative',
+                                }}>
+                                    <Text>LOGO</Text>
+                                </View>
+                                <View>
+                                    <Text style={JobStyle.compagnyName}>Linkedin Corporation</Text>
+                                    <Text style={JobStyle.jobLocality}>Cocody</Text>
+                                </View>
+                            </View>
 
-                    <View style={JobStyle.navigation}>
-                        <Text style={JobStyle.navItem}>Descrptions</Text>
-                        <Text style={[JobStyle.navItem,JobStyle.active]}>Compagnie</Text>
-                        <Text style={JobStyle.navItem}>Activiés</Text>
+                            <View style={JobStyle.navigation}>
+                                <Text style={JobStyle.navItem}>Descrptions</Text>
+                                <Text style={[JobStyle.navItem,JobStyle.active]}>Compagnie</Text>
+                                <Text style={JobStyle.navItem}>Activiés</Text>
+                            </View>
+                        
+                            <View style={JobStyle.detailContainer}>
+                                <View style={JobStyle.detailItem}>
+                                    <Text style={JobStyle.detailTitle}>Outils:</Text>
+                                    <Text>Réseaux sociaux, Gestion de projet</Text>
+                                </View>
+                                <View style={JobStyle.detailItem}>
+                                    <Text style={JobStyle.detailTitle}>Experiences:</Text>
+                                    <Text>2 à 3 ans</Text>
+                                </View>
+                                <View style={JobStyle.detailItem}>
+                                    <Text style={JobStyle.detailTitle}>Autre:</Text>
+                                    <Text>Adobe Illustration, Adobe PhotoShop, Adobe XD</Text>
+                                </View>
+                            </View>
+
+                        </ScrollView>
                     </View>
                     
-                    <View style={JobStyle.detailContainer}>
-                        <View style={JobStyle.detailItem}>
-                            <Text style={JobStyle.detailTitle}>Outils:</Text>
-                            <Text>Réseaux sociaux, Gestion de projet</Text>
-                        </View>
-                        <View style={JobStyle.detailItem}>
-                            <Text style={JobStyle.detailTitle}>Experiences:</Text>
-                            <Text>2 à 3 ans</Text>
-                        </View>
-                        <View style={JobStyle.detailItem}>
-                            <Text style={JobStyle.detailTitle}>Autre:</Text>
-                            <Text>Adobe Illustration, Adobe PhotoShop, Adobe XD</Text>
-                        </View>
-                    </View>
-
                     <View style={{
                         position: 'absolute',
-                        bottom: 10,
-                        width: '100%',
+                        bottom: 8,
+                        width: '95%',
                         flexDirection: 'row',
-                        left: 20,
+                        left: 10,
                     }}>
                         <TouchableOpacity style={JobStyle.favContainer}>
                             <FontAwesome5
@@ -113,7 +120,6 @@ const JobDetails = () => {
                             <Text style={{color: 'white', fontSize: 18,}}>Postuler</Text>
                         </TouchableOpacity>
                     </View>
-                </View>
             </View>
         </View>
     )
@@ -173,6 +179,7 @@ const JobStyle = StyleSheet.create({
         flex: 1,
         margin: 'auto',
         padding: 20,
+        paddingBottom: 50,
         backgroundColor: 'white',
         borderTopRightRadius: 35,
         borderTopLeftRadius: 35,
