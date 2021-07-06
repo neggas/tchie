@@ -17,6 +17,7 @@ import Login from "./Screens/Login/Login-container";
 import Register from "./Screens/Register/Register-container";
 import MessagesInbox from "./Screens/Messages/InboxContainer"
 import JobForm from './Screens/Jobs/JobForm';
+import SideBar from './Shared/SideBar';
 import {NavigationContainer} from "@react-navigation/native";
 import Main from "./Navigators/Main";
 
@@ -28,6 +29,7 @@ export default function App() {
       <View style={{height:"100%"}}>
         <Header/>
         <JobForm/>
+        <SideBar/>
       </View>
      
     )

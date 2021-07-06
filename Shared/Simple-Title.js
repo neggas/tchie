@@ -2,9 +2,9 @@ import React from "react";
 import {View, StyleSheet} from "react-native";
 import {H3} from "native-base"
 
-const SimpleTitle = ({text})=>{
+const SimpleTitle = ({text, padd, marg})=>{
     return(
-        <View style={styles.jobs}>
+        <View style={[styles.jobs, {padding: padd, margin: marg}]}>
             <View>
                 <H3 style={styles.left}>{text}</H3>
                 <View style={styles.trait}></View>
@@ -18,8 +18,6 @@ const SimpleTitle = ({text})=>{
 const styles = StyleSheet.create({
     jobs:{
         flexDirection:"row",
-        marginTop:10,
-        padding:10,
         justifyContent:"space-between",
         alignItems:"center",
        

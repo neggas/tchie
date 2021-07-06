@@ -41,7 +41,7 @@ const JobForm = () => {
                 <Form>
 
                     <View>
-                        <SimpleTitle text="Image du Job"/>
+                        <SimpleTitle padd={10} marg={10} text="Image du Job"/>
                         <View style={styles.imageContainer}>
                             <View
                                 style={{
@@ -80,13 +80,13 @@ const JobForm = () => {
                         </View>
                     </View>
 
-                    <SimpleTitle text="Détails du Job"/>
+                    <SimpleTitle padd={10} marg={10} text="Détails du Job"/>
                     <View style={styles.info}>
                         <TextInput placeholder="Titre du job" style={styles.input}/>
                         <TextInput placeholder="Niveau d'experience" style={styles.input}/>
                         <TextInput placeholder="Durée du job" style={styles.input}/>
 
-                        <SimpleTitle text="Niveau d'anglais"/>
+                        <SimpleTitle padd={10} marg={10} text="Niveau d'anglais"/>
                         <View style={styles.pickerContainer}>
                             <Picker
 
@@ -104,7 +104,7 @@ const JobForm = () => {
                             </Picker>
                         </View>
 
-                        <SimpleTitle text="Niveau du projet"/>
+                        <SimpleTitle padd={10} marg={10} text="Niveau du projet"/>
                         <View style={styles.pickerContainer}>
                             <Picker
 
@@ -124,7 +124,7 @@ const JobForm = () => {
                         
                     </View>
                     <View>
-                        <SimpleTitle text="Catégories du job"/>
+                        <SimpleTitle padd={10} marg={10} text="Catégories du job"/>
                         <View style={styles.pickerContainer}>
                             <Picker
 
@@ -143,12 +143,12 @@ const JobForm = () => {
                         </View>
                     </View>
                     <View>
-                        <SimpleTitle text="Description du job"/>
+                        <SimpleTitle padd={10} marg={10} text="Description du job"/>
                         <TextInput placeholder="Description" style={styles.descriptionInput}
                         />
                     </View>
                     <View>
-                        <SimpleTitle text="Compétences requises"/>
+                        <SimpleTitle padd={10} marg={10} text="Compétences requises"/>
                         <View style={styles.pickerContainer}>
                             <Picker
 
