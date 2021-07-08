@@ -41,7 +41,7 @@ const JobForm = () => {
                 <Form>
 
                     <View>
-                        <SimpleTitle text="Image du Job"/>
+                        <SimpleTitle padd={10} marg={10} text="Image du Job"/>
                         <View style={styles.imageContainer}>
                             <View
                                 style={{
@@ -80,57 +80,91 @@ const JobForm = () => {
                         </View>
                     </View>
 
-                    <SimpleTitle text="Détails du Job"/>
+                    <SimpleTitle padd={10} marg={10} text="Détails du Job"/>
                     <View style={styles.info}>
                         <TextInput placeholder="Titre du job" style={styles.input}/>
                         <TextInput placeholder="Niveau d'experience" style={styles.input}/>
                         <TextInput placeholder="Durée du job" style={styles.input}/>
 
-                        <SimpleTitle text="Niveau d'anglais"/>
-                        <Picker
+                        <SimpleTitle padd={10} marg={10} text="Niveau d'anglais"/>
+                        <View style={styles.pickerContainer}>
+                            <Picker
 
-                            style={styles.picker}
-                            placeholder="Niveau d'anglais"
-                            mode="dropdown"
-                        >
-                            {niveaux.map((niveau) =>(
-                                <Picker.Item
-                                key={niveau.id}
-                                label={niveau.label}
-                                value={niveau.value}
-                            />
-                            ))}
-                        </Picker>
+                                style={styles.picker}
+                                placeholder="Niveau d'anglais"
+                                mode="dropdown"
+                            >
+                                {niveaux.map((niveau) =>(
+                                    <Picker.Item
+                                    key={niveau.id}
+                                    label={niveau.label}
+                                    value={niveau.value}
+                                />
+                                ))}
+                            </Picker>
+                        </View>
 
-                        <SimpleTitle text="Niveau du projet"/>
-                        <Picker
+                        <SimpleTitle padd={10} marg={10} text="Niveau du projet"/>
+                        <View style={styles.pickerContainer}>
+                            <Picker
 
-                            style={styles.picker}
-                            placeholder="Niveau du projet"
-                            mode="dropdown"
-                        >
-                            {niveaux.map((niveau) =>(
-                                <Picker.Item
-                                key={niveau.id}
-                                label={niveau.label}
-                                value={niveau.value}
-                            />
-                            ))}
-                        </Picker>
+                                style={styles.picker}
+                                placeholder="Niveau du projet"
+                                mode="dropdown"
+                            >
+                                {niveaux.map((niveau) =>(
+                                    <Picker.Item
+                                    key={niveau.id}
+                                    label={niveau.label}
+                                    value={niveau.value}
+                                />
+                                ))}
+                            </Picker>
+                        </View>
                         
                     </View>
                     <View>
-                        <SimpleTitle text="Catégories du job"/>
-                        <TextInput placeholder="Choisir une catégorie" style={styles.input}/>
+                        <SimpleTitle padd={10} marg={10} text="Catégories du job"/>
+                        <View style={styles.pickerContainer}>
+                            <Picker
+
+                                style={styles.picker}
+                                placeholder="Niveau du projet"
+                                mode="dropdown"
+                            >
+                                {niveaux.map((niveau) =>(
+                                    <Picker.Item
+                                    key={niveau.id}
+                                    label={niveau.label}
+                                    value={niveau.value}
+                                />
+                                ))}
+                            </Picker>
+                        </View>
                     </View>
                     <View>
-                        <SimpleTitle text="Description du job"/>
+                        <SimpleTitle padd={10} marg={10} text="Description du job"/>
                         <TextInput placeholder="Description" style={styles.descriptionInput}
                         />
                     </View>
                     <View>
-                        <SimpleTitle text="Compétences requises"/>
-                        <TextInput placeholder="plusieurs choix possible" style={styles.input}/>
+                        <SimpleTitle padd={10} marg={10} text="Compétences requises"/>
+                        <View style={styles.pickerContainer}>
+                            <Picker
+
+                                style={styles.picker}
+                                placeholder="Niveau du projet"
+                                mode="dropdown"
+                            >
+                                {niveaux.map((niveau) =>(
+                                    <Picker.Item
+                                    key={niveau.id}
+                                    label={niveau.label}
+                                    value={niveau.value}
+                                />
+                                ))}
+                            </Picker>
+                        </View>
                     </View>
                     
                 </Form>
@@ -182,6 +216,11 @@ const styles = StyleSheet.create({
         padding:8,
         marginTop:10,
         backgroundColor:"white",
+    },
+    pickerContainer: {
+        width:"100%",
+        borderWidth:1,
+        borderColor:"#352961",
     },
     picker:{
         width:"100%",

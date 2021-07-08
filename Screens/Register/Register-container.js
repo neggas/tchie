@@ -34,7 +34,7 @@ const Register = ()=>{
                         <Text style={styles.decription}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium nostrum consequuntur, necessitatibus quia impedit nihil hic qui, porro id praesentium, eaque nisi in repellendus beatae. Ipsa minus fugit laborum ad!</Text>
                 </View>
                 <Form>
-                    <SimpleTitle text="Détails personnel"/>
+                    <SimpleTitle padd={10} marg={10} text="Détails personnel"/>
                     <View style={styles.gender}>
                         <View style={{flexDirection:"row"}}>
                             <CheckBox style={styles.custumChecked} checked={true} color="#fc8080"/>
@@ -54,7 +54,7 @@ const Register = ()=>{
                         <TextInput placeholder="Mot de passe confirmé" style={styles.input}/>
                         
                     </View>
-                    <SimpleTitle text="Localité"/>
+                    <SimpleTitle padd={10} marg={10} text="Localité"/>
                     <Picker
                     
                         style={styles.picker}
@@ -66,7 +66,7 @@ const Register = ()=>{
                         ))}
                     
                     </Picker>
-                    <SimpleTitle text="Statut"/>
+                    <SimpleTitle padd={10} marg={10} text="Statut"/>
                     <View style={styles.gender}>
                         <View style={{flexDirection:"row"}}>
                             <CheckBox style={styles.custumChecked} checked={true} color="#fc8080"/>
