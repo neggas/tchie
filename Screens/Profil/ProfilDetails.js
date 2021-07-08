@@ -38,6 +38,7 @@ const ProfilDetails = () => {
         }]}>
             {/* Le top avec l'image de fond */}
             <ImageBackground style={JobStyle.bgContainer}
+            
             source={require('../../assets/bg2.png')}
             >
                 <View style={[JobStyle.container, {
@@ -99,6 +100,7 @@ const ProfilDetails = () => {
                         <TouchableOpacity style={[JobStyle.btn,{
                             backgroundColor: '#eee',
                             flexDirection: 'row',
+                            
                         }]}>
                             <FontAwesome5
                                 name="long-arrow-alt-left"
@@ -203,11 +205,15 @@ const ProfilDetails = () => {
 const JobStyle = StyleSheet.create({
     container: {
         flex: 1,
+        backgroundColor:"#f5f7f9",
+        
     },
     bgContainer: {
         width: '100%',
-        minHeight: 150,
-        marginTop: 40,
+        height:"49%",
+       position:"relative",
+  
+        
     },
     iconContainer: {
         alignItems: 'center',

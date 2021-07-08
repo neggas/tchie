@@ -28,15 +28,17 @@ const styles = StyleSheet.create({
         width:"100%",
         flexDirection:"row",
         justifyContent:"space-between",
-        alignItems:"center"
+        alignItems:"center",
     },
     input:{
         height:40,
-        width:"85%",
+        width:"95%",
         backgroundColor:"white",
         borderRadius:20,
         padding:10,
-        color:"#3529614b"
+        position:"absolute",
+        color:"#3529614b",
+        
     },
     iconButton:{
         backgroundColor:"#352961",
@@ -44,6 +46,7 @@ const styles = StyleSheet.create({
         alignItems:"center",
         height:40,
         borderRadius:15,
+        left:"86%"
     }
   
     

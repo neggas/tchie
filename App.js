@@ -25,20 +25,11 @@ import Main from "./Navigators/Main";
 export default function App() {
  
   const [start,setStart] = useState(false)
-
-    return(
-      <View style={{height:"100%"}}>
-        <Header/>
-        <ProfilDetails/>
-      </View>
-     
-    )
- 
-  // return start ? (
-  //   <NavigationContainer>
-  //     <Header/>
-  //     <Main/>
-  //   </NavigationContainer>
-  // ) : <HomeContainer setStart={setStart}/>
+  return start ? (
+    <NavigationContainer>
+      <Header/>
+      <Main/>
+    </NavigationContainer>
+  ) : <HomeContainer setStart={setStart}/>
 }
 

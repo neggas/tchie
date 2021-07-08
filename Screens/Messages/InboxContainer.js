@@ -5,7 +5,8 @@ import {
     StyleSheet,
     TextInput,
     ScrollView,
-    TouchableOpacity
+    TouchableOpacity,
+    Dimensions
 } from 'react-native';
 import {
     Form,
@@ -13,8 +14,10 @@ import {
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5'
 import MessageProfilCard from './MessageProfilCard';
 import Messages from './Messages';
-
+const {width} = Dimensions.get("window")
 const InboxContainer = () => {
+
+    
     return (
         <View
             style={styles.InboxContainer}
@@ -70,7 +73,7 @@ const styles = StyleSheet.create({
         position: 'relative',
     },
     inputStyle: {
-        width: 350,
+        width:width-60,
         minHeight: 38,
         maxHeight: 80,
         justifyContent: 'center',
